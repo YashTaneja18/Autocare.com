@@ -1,0 +1,116 @@
+.struct
+{
+    margin:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 1300;  
+}
+.pop
+{
+    margin:0 110;
+}
+.pop button
+{
+    width:120px;
+    height:65px;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.24), 0 2.5px 2.5px 0 rgba(0,0,0,0.19);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;;
+  color: rgb(104, 103, 103);
+}
+.pop button:hover
+{
+    border-radius:5px;
+    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:black;
+}
+.pop td
+{
+    
+    padding-bottom: 20px;
+}
+.pop table
+{
+    text-align: center;
+    margin:auto;
+    border-radius: 5px;
+    width:100%;
+    padding-top: 20px;
+    font-size:20px;
+}
+.light
+{
+  color:#8AB6F9;
+}
+.dark
+{
+  color:#00246B;
+}
+h1
+{
+  font-family: "Audiowide", sans-serif;
+}
+.vnav,.vbut,.filter
+{
+    margin:0 110;
+}
+.vnav table
+{
+    text-align: center;
+    margin:auto;
+    border-radius: 5px;
+    width:100%;
+}
+
+.vnav button
+{
+    width:30px;
+    height: 30px;
+    border-color: transparent;
+}
+.vnav button:active
+{
+    background-color: black;
+}
+.vnav button h4
+{
+    margin: auto;
+}
+.vnav td
+{
+    border-color: black;   
+}
+.vbut button
+{
+    width:120px;
+    height:65px;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.24), 0 2.5px 2.5px 0 rgba(0,0,0,0.19);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;;
+  color: rgb(104, 103, 103);
+}
+.vbut button:hover
+{
+    border-radius:5px;
+    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:black;
+}
+.vbut td
+{
+    
+    padding-bottom: 10px;
+}
+.vbut table
+{
+    text-align: center;
+    margin:auto;
+    border-radius: 5px;
+    width:100%;
+    padding-top: 20px;
+    font-size:20px;
+}

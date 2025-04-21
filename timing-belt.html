@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<link rel="stylesheet" href="timing-belt.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belt</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+</head>
+<body>
+  <div class="navA">
+    <table>
+        <tr>
+            <td><a vlaue="a" href="home.html" class="logo">Autocare</a></td>
+            <td><a class="active" href="home.html">Home</a></td>
+            <td><a href="#news">News</a></td>
+            <td><a href="contactus.html">Contact</a></td>
+            <td><a href="aboutus.html">About</a></td>
+            <td>
+                <div class="searchA">
+                    <input type="search" placeholder="search here..."><button type="button" value="searA"><img src="search.jpg"></button>
+                </div>
+            </td>
+            <td>
+                <a href="signin.html" id="sinin">Sign in</a>
+            </td>
+            <td>
+                <a href="address.html"><button type="button" value="cart"><img src="cart.jpg"></button></a>
+            </td>
+          
+        </tr>
+    </table>
+</div>
+
+  
+<div class="sidenav">
+        
+  <button class="dropdown1">Maintenance Service Parts </button>
+  <div class="dropdown-container">
+    
+    
+      <a href="timing-belt.html">Belt</a>
+    
+
+
+  <a href="timing-belt.html">Brake </a>
+
+ 
+
+
+
+  <a href="timing-belt.html">Engine</a>
+
+
+
+
+
+
+
+   
+  </div>
+
+  <button class="dropdown1">Air Conditioner </button>
+  <div class="dropdown-container">
+    <a href="ac-compressor.html">AC Compressor</a>
+<a href="ac-compressor.html">AC Compressor Clutch</a>
+
+
+
+
+  </div>
+  
+
+  <button class="dropdown1">Belts Chains and Rollers </button>
+  <div class="dropdown-container">
+    <a href="alternate-pulley.html">Alternator Pulley</a>
+<a href="alternate-pulley.html">Belt Pulley</a>
+
+
+</div>
+
+<button class="dropdown1">Bearings </button>
+  <div class="dropdown-container">
+    <a href="bearing.html">Alternator Bearing</a>
+<a href="bearing.html">Bearing Pulley</a>
+
+
+</div>
+<button class="dropdown1">Body </button>
+<div class="dropdown-container">
+  <a href="body.html">Exterior</a>
+<a href="body.html">Interior </a>
+
+
+</div>
+</div>
+        <div class="items">
+          
+        <table class="item-table" cellspacing="25" > 
+            <h1 style=text-align:left><span class="dark">Maintenance Service Parts    >   </span><span class="light">Belt</span></h1>
+            
+          <tr><td><a href="http://localhost:3000/timingbelt.html
+          ">
+            <img src="a.jpeg" width="223.75px" height="180.5px"><br><p class="name">Timing Belt</p><p class="price">₹350</p>
+            <p ><button class="add"><img src="shopping-cart.png" width="20px" height="auto"><p>Add To Cart</p></button></p>
+          </a>
+          </td>
+            <td><a href="http://localhost:3000/timingbelt2.html
+            ">
+              <img src="b.jpg" width="223.75px" height="180.5px"><br><p class="name">Timing Belt</p><p class="price">₹450</p>
+              <p ><button class="add"><img src="shopping-cart.png" width="20px" height="auto"><p>Add To Cart</p></button></p>
+            </a>
+            </td>
+            <td><a href="http://localhost:3000/timingbelt3.html
+            ">
+              <img src="c.jpg" width="223.75px" height="180.5px"><br><p class="name">Timing Belt</p><p class="price">₹126</p>
+              <p ><button class="add"><img src="shopping-cart.png" width="20px" height="auto"><p>Add To Cart</p></button></p>
+            </a>
+            </td>
+            </tr>
+               
+            
+         
+        </table>
+        </div>
+        
+        
+        
+        <script>
+        var dropdown1 = document.getElementsByClassName("dropdown1");
+        var i;
+        
+        for (i = 0; i < dropdown1.length; i++) {
+          dropdown1[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        
+        var dropdown2 = document.getElementsByClassName("dropdown2");
+        var i;
+        
+        for (i = 0; i < dropdown2.length; i++) {
+          dropdown2[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          
+        }
+        
+          function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          
+        }
+        
+        
+        </script>
+        
+</body>
+</html>
