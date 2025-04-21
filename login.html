@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: auto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #CADCFC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-family: "Audiowide", sans-serif;
+            color: #00246B;
+        }
+        .input-box {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #8AB6F9;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #00246B;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #001A4D;
+        }
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+        .signup {
+            color:#001A4D;
+            font-size: 14px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" name="uname" id="uname" class="input-box" placeholder="Username" required>
+            <input type="password" name="psw" id="psw" class="input-box" placeholder="Password" required>
+            <button type="submit" class="login-btn">Login</button>
+            <p class="error-msg" id="error-msg">Incorrect Username or Password</p>
+            <p class="signup"><a href="http://localhost:3000/signup.html">New to Autocare? Sign up</a></p>
+            
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            
+            const uname = document.getElementById("uname").value;
+            const psw = document.getElementById("psw").value;
+            
+            const response = await fetch("/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ uname, psw }),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                
+                window.location.href = `http://127.0.0.1:5500/home.html?username=${encodeURIComponent(data.uname)}`; // Redirect to home page
+            } else {
+                document.getElementById("error-msg").style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>

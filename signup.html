@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>
+      Sign Up
+    </title>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 400px auto;
+    margin-top: 40px;
+} 
+* {box-sizing: border-box}
+
+h1{
+    color: #00246b;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #cadcfc;
+
+  color: #00246b;;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #00246b;
+  color: white;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<form action="/register" style="border:1px solid #ccc" name="sign" method="post">
+  <div class="container">
+    <h1><center>Sign Up</center></h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <div ng-app="myapp" ng-controller="checker">
+    <label for="fname"><b>First Name</b></label>
+    <input type="text" placeholder="Ex Sham" name="fname"  ng-model="fname" ng-change="first()" required>
+    <ul style="list-style-type: none;">
+      <li ng-style="fn">{{coname}}</li>
+      
+    </ul>
+    <label for="lname"><b>Last Name</b></label>
+    <input type="text" placeholder="Ex Sharma" name="lname" required ng-model="lname" ng-change="last()">
+    <ul style="list-style-type: none;">
+      <li ng-style="fn">{{conamel}}</li>
+      
+    </ul>
+    <label for="dob"><b>DOB</b></label><br><br>
+    <input type="date" name="dob" required>
+    <br>
+    <br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Ex shamsharma69@gmail.com" name="email" ng-model="em" ng-change="emailcheck()" required>
+    <ul style="list-style-type: none;">
+      <li ng-style="fn">{{emn}}</li>
+      
+    </ul>
+    <label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="Username" required ng-model="user" ng-change="usercheck()">
+    <ul style="list-style-type: none;">
+      <li>Username must be 6-10 Characters long.</li>
+      <li>Username must contain only @ or _ .</li>
+      <li ng-style="fn">{{userveri}}</li>
+      
+    </ul>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" ng-model="pas" ng-change="check()">
+    <ul style="list-style-type: none;">
+      <li ng-style="lengt">Password lenght must be 8 or above</li>
+      <li ng-style="special">Contains atleast one special symbol</li>
+      <li ng-style="digit">Cotains atleast one digit</li>
+      <li ng-style="upper">Contains atleast one Upper case alphabet</li>
+    </ul>
+   <script>
+    var app=angular.module("myapp",[]);
+    app.controller("checker",function($scope)
+    {
+      $scope.pas='';
+      $scope.fname='';
+      $scope.lname='';
+      $scope.cons='';
+      $scope.coname='';
+      $scope.userveri='';
+      $scope.em='';
+      $scope.emn='';
+      $scope.ps={'color':'red'};
+      $scope.emailveri=/^[a-zA-Z]+[0-9]+@[a-zA-Z]+\.com$/;
+      $scope.fn={'color':'red'};
+      $scope.us=/^[a-zA-Z0-9@_]{6,10}$/;
+      $scope.lengt={'color':'red'};
+      $scope.special={'color':'red'};
+      $scope.digit={'color':'red'};
+      $scope.upper={'color':'red'};
+      $scope.names=/^[a-zA-Z]+$/;
+      $scope.sexp=/[@\.\$]+/;
+      $scope.dexp=/[0-9]+/;
+      $scope.uexp=/[A-Z]+/;
+      $scope.re="";
+      $scope.first=function()
+      {
+        if (! $scope.fname.match($scope.names))
+          $scope.coname='Name must not contain a number!';
+        else if(! $scope.fname)
+          $scope.coname="Name must not be empty!!";
+        else
+          $scope.coname='';
+      }
+      $scope.last=function()
+      {
+        if (! $scope.lname.match($scope.names))
+          $scope.conamel='Name must not contain a number!';
+        else if(! $scope.lname)
+          $scope.conamel="Name must not be empty!!";
+        else
+          $scope.conamel='';
+      }
+      $scope.emailcheck=function()
+      {
+        if(! $scope.em.match( $scope.emailveri))
+          $scope.emn="Enter a valid email address!!";
+        else
+        $scope.emn="";
+      }
+      $scope.usercheck=function()
+      {
+        if(! $scope.user.match($scope.us))
+          $scope.userveri="Enter a valid user name!!";
+        else
+          $scope.userveri='';
+      }
+      $scope.check=function(){
+
+      if($scope.pas.length>=8)
+        $scope.lengt={'color':'lightgreen'};
+      else
+        $scope.lengt={'color':'red'};
+      if($scope.pas.match($scope.sexp))
+        $scope.special={'color':'lightgreen'};
+      else
+        $scope.special={'color':'red'};
+      if($scope.pas.match($scope.dexp))
+        $scope.digit={'color':'lightgreen'};
+      else
+        $scope.digit={'color':'red'};
+      if($scope.pas.match($scope.uexp))
+        $scope.upper={'color':'lightgreen'};
+      else
+        $scope.upper={'color':'red'};
+      }
+      $scope.repas=function()
+      {
+        if($scope.renter!=$scope.pas)
+          $scope.re="Please enter the same password!!";
+        else if($scope.renter==$scope.pas){
+        $scope.re="Matched!!";
+          $scope.ps={'color':'lightgreen'};
+      }
+        else
+          $scope.re='';
+          $scope.ps={'color':'red'};
+      }
+
+    });
+   </script>
+    
+    <label for="psw-repeat"><b>Re-enter Password</b></label>
+    <input type="password" placeholder="Re-enter Password" name="psw-repeat" ng-model="renter" ng-change="repas()" required>
+    <ul style="list-style-type: none;">
+      <li ng-style="ps">{{re}}</li>
+    </ul>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    <p>By creating an account you agree to our <a href="returnpolicy.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <a href="home.html"><button type="button" class="cancelbtn">Cancel</button></a>
+      <button type="submit" class="signupbtn" >Sign Up</button>
+    </div>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

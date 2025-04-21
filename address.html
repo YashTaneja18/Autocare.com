@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Shipping Address
+        </title>
+        <style>
+            body{
+                font-family: sans-serif;
+                margin: 0 130px;
+                margin-top: 20px ;
+                color: #00246b;
+            }
+            p1{
+                font-size: 30px;
+            }
+            p2{
+                font-size: 20px;
+            }
+            button {
+                background-color: #00246b;
+                color:white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100px;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+
+            input[type=text]{
+                width: 350px;
+                height: 50px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            textarea{
+                border: 1px solid #ccc;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+
+        <p1>Shipping Address</p1><br><br>
+        <p2>Contact Details</p2>
+            <table cellspacing="10px">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="First Name" name="fname" required>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Last Name" name="lname" required>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Mobile" name="mobile" required>
+                    </td>
+                </tr>
+            </table>
+
+        <p2>Address</p2><br><br>
+        <table>
+            <tr>
+                <td><textarea cols="90" rows="5" placeholder="  Address"></textarea><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Address Title (Optional)" name="country" required></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Pincode" name="pincode" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" placeholder="Country" name="country" required>
+                </td>
+            </tr>
+        </table>
+        <button>Back</button>
+        <button>Proceed</button>
+        
+
+            
+    </body>
+</html>

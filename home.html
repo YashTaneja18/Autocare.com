@@ -1,0 +1,941 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="hom.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <script src="angular.min.js"></script>
+        <title>
+            Autocare.com
+        </title>
+       
+    </head>
+    <style>
+        .struct
+{
+    margin:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 1300;
+   
+}
+.light
+{
+  color:#8AB6F9;
+}
+.dark
+{
+  color:#00246B;
+}
+ 
+.dis
+{
+    background-color: #00246B;
+    border:2px solid #00246B;
+ 
+}
+.nav table
+{
+    margin:auto;
+    width: 83%;
+    border-radius: 5px;
+    background-color: #CADCFC;
+    font-size:20px;
+}
+.nav tr td:nth-child(6)
+ {
+   padding-right: 50px;
+ }
+.nav tr td:nth-child(7)
+ {
+   padding-right: 20px;
+ }
+.nav tr td:nth-child(8)
+ {
+   padding-right: 35px;
+ }
+.nav tr td:last-child
+ {
+  padding-right: 35px;
+}
+.mySlides
+{
+  display: none;
+  transition: width 1s, height 1s, background-color 1s;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+ 
+}
+.coffer,.scat,.dmob
+{
+  margin:0 110px;
+ 
+}
+h1
+{
+  font-family: "Audiowide", sans-serif;
+}
+.coffer button
+{
+  width:50px;
+  height: 50px;
+  font-size: 40px;
+  background-color: transparent;
+  border-color: transparent;
+}
+.disp
+{
+  margin: auto;
+  width:83%;
+  background-color: #8AB6F9;
+  height:40%;
+  display: flex;
+}
+.fade {
+  animation-name:fade;
+  animation-duration: 2.5s;
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+input[type="search"]
+{
+  border-style: none;
+    margin: 0 auto;
+    display: block;
+    height:30px;
+    width:200px;
+    float: left;
+    border-style: none;
+    border-radius: 25px;
+}
+input[type="search"]::placeholder
+{
+  color:grey;
+ 
+}
+img
+{
+  width:20px;
+ 
+}
+button[value="sear"]
+{
+    margin: 0 ;
+    height:30px;
+    padding: 0px;
+    width:30px;
+    border-style: none;
+    border-radius: 25px;
+    background-color: white;
+}
+button[value="cart"]
+{
+  margin: 0 ;
+  height:30px;
+  padding: 0px;
+  width:30px;
+  border-style: none;
+  background-color:transparent;
+}
+button[value="sear"]:hover
+{
+  cursor: pointer;
+}
+ 
+.search
+{
+  background-color: white;
+  border-radius: 25px;
+  position: relative;
+}
+.logo
+{
+    font-family: fantasy;
+}
+.nav td a {
+  display: block;
+  color: #00246B;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition:  0.3s;
+}
+ 
+.nav td a:hover {
+  border-radius: 5px;
+  box-shadow: 0 0px 16px 0 #8AB6F9 ;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right:0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+ 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+ 
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+ 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+ 
+.off {
+  display: none;
+}
+.lo
+{
+  overflow: hidden;
+}
+.sbut table
+{
+    margin:auto;
+    border-radius: 25px;
+   
+    font-size:20px;
+}
+.sbut button
+{
+  width:190px;
+  height: 230px;
+  border-radius: 25px;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 0px 2px 0 rgba(0,0,0,0.24), 0 2.5px 2.5px 0 rgba(0,0,0,0.19);
+  transition: 0.3s;
+  color: rgb(104, 103, 103);
+ 
+}
+.sbut img
+{
+  width:90px;
+  margin-bottom:30px;
+}
+.sbut img[src="air.png"]
+{
+  width:100px;
+  margin-bottom:015px;
+}
+.sbut img[src="chain.png"]
+{
+  width:120px;
+  margin-bottom:10px;
+}
+.sbut img[src="chassis.png"]
+{
+  width:125px;
+  margin-bottom:10px;
+}
+.sbut button:hover
+{
+  box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color:black;
+}
+ 
+.dmob table
+{
+  background-color:#8AB6F9 ;
+  color: white;
+  width: 100%;
+  margin: auto;
+}
+.dmob img
+{
+  width:170px;
+}
+.dmob button
+{
+  width:200px;
+  height: 60px;
+  border-color: transparent;
+  background-color: #f5f6f8;
+  border-radius: 25px;
+  transition: .3s;
+}
+.dmob button:hover
+{
+  box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#sbuts
+{
+  display:none;
+ 
+}
+#sbuts table
+{
+    margin:auto;
+    border-radius: 25px;  
+    font-size:20px;
+}
+#sbuts button
+{
+  width:190px;
+  height: 230px;
+  border-radius: 25px;
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: 0 0px 2px 0 rgba(0,0,0,0.24), 0 2.5px 2.5px 0 rgba(0,0,0,0.19);
+  transition: 0.3s;
+  color: rgb(104, 103, 103);
+ 
+}
+#sbuts img
+{
+  width:90px;
+  margin-bottom:30px;
+}
+#sbuts img[src="air.png"]
+{
+  width:100px;
+  margin-bottom:015px;
+}
+#sbuts img[src="chain.png"]
+{
+  width:120px;
+  margin-bottom:10px;
+}
+#sbuts img[src="chassis.png"]
+{
+  width:125px;
+  margin-bottom:10px;
+}
+#sbuts button:hover
+{
+  box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color:black;
+}
+#viewmore
+{
+  margin: auto;
+  font-size: 20px;
+  border-color: transparent;
+  width:125px;
+  height:50px;
+  transition: 0.3s;
+}
+#viewmore:hover{  
+  background-color: #CADCFC;
+  color:#00246B;
+ 
+  color:black;
+}
+.pop
+{
+    margin:0 110;
+}
+.pop button
+{
+    width:120px;
+    height:65px;
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: 0 0px 2px 0 rgba(0,0,0,0.24), 0 2.5px 2.5px 0 rgba(0,0,0,0.19);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;;
+  color: rgb(104, 103, 103);
+}
+.pop button:hover
+{
+    border-radius:5px;
+    box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:black;
+}
+.pop td
+{
+   
+    padding-bottom: 20px;
+}
+.pop table
+{
+    text-align: center;
+    margin:auto;
+    border-radius: 5px;
+    width:100%;
+    padding-top: 20px;
+    font-size:20px;
+}
+ 
+.left
+{
+  float: left;
+}
+ 
+#sin
+{
+  position:fixed;
+  margin: auto;
+  margin-top: 0;
+  display: none;
+  backdrop-filter: blur(10px);
+  z-index: 10000;  
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+}
+.cont
+{
+  position:relative;
+  margin: auto;
+  z-index: 10000;
+}
+.cont form {
+  border: 3px solid #f1f1f1;
+  margin: 0 450px auto;
+  background-color: white;
+ 
+}
+ 
+.cont input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+ 
+.cont button {
+background-color: #cadcfc;
+color: #00246b;
+transition: 0.3s;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+ 
+.cont button:hover {
+opacity: 0.8;
+}
+ 
+.cont .cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #00246b;
+color: white;
+}
+ 
+.cont .imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+}
+ 
+.cont img.avatar {
+width: 40%;
+border-radius: 50%;
+}
+ 
+.cont .container {
+padding: 16px;
+}
+ 
+#searchResults {
+    position: fixed;
+    top: 80px; /* Adjust this value based on your navbar height */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Match your search input width */
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 9999;
+    margin-top: 5px;
+}
+ 
+#searchResults li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+    list-style: none;
+}
+ 
+#searchResults li:hover {
+    background-color: #f5f5f5;
+}
+ 
+#searchResults li:last-child {
+    border-bottom: none;
+}
+ 
+    </style>
+    <body ng-app="myapp" ng-controller="checker">
+            <div class="cont" >
+              <script>
+                
+                
+ 
+                // Sample data (Replace this with dynamic content if needed)
+ 
+const items = [
+    { name: "Brake Bearing", description: "Stop Car", link: "bearing.html" },
+    { name: "AC Compressor", description: "Beat the heat", link: "ac-compressor.html" },
+    { name: "Belt", description: "Strong", link: "timingbelt.html" },
+    { name: "Pulley", description: "Alternate pulley", link: "alternate-pulley.html" }
+];
+ 
+function searchItems() {
+    let query = document.getElementById("searchInput").value.toLowerCase().trim();
+    let results = document.getElementById("searchResults");
+   
+    results.innerHTML = "";
+   
+    if (query === "") {
+        results.style.display = "none";
+        return;
+    }
+ 
+    results.style.display = "block";
+   
+    let matchFound = false;
+   
+    items.forEach(item => {
+        if (item.name.toLowerCase().includes(query) ||
+            item.description.toLowerCase().includes(query)) {
+            let li = document.createElement("li");
+            li.textContent = `${item.name} - ${item.description}`;
+           
+            // Add click event listener to each list item
+            li.addEventListener('click', function() {
+                window.location.href = item.link; // Navigate to item page
+            });
+           
+            // Add cursor pointer style
+            li.style.cursor = 'pointer';
+           
+            results.appendChild(li);
+            matchFound = true;
+        }
+    });
+ 
+    if (!matchFound) {
+        results.innerHTML = "<li>No results found</li>";
+    }
+}
+ 
+// Hide results on page load
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("searchResults").style.display = "none";
+});
+ 
+// Hide results when clicking outside
+document.addEventListener('click', function(event) {
+    let searchInput = document.getElementById("searchInput");
+    let searchResults = document.getElementById("searchResults");
+   
+    if (!searchInput.contains(event.target) && !searchResults.contains(event.target)) {
+        searchResults.style.display = "none";
+        searchInput.value = "";
+    }
+});
+ 
+// Add event listener for input clearing
+document.getElementById("searchInput").addEventListener('input', function(e) {
+    if (e.target.value === "") {
+        document.getElementById("searchResults").style.display = "none";
+    }
+});
+ 
+ 
+ 
+ 
+            </script>
+        </div>
+        <div class="struct">
+            <div class="nav">
+                <table>
+                    <tr>
+                        <td><a href="home.html" class="logo">Autocare</a></td>
+                        <td><a class="active" href="home.html">Home</a></td>
+                        <td><a href="#news">News</a></td>
+                        <td><a href="contactus.html">Contact</a></td>
+                        <td><a href="aboutus.html">About</a></td>
+                        <td>
+                            <div class="search">
+                                <input type="text" placeholder="Search here..." id="searchInput" onkeyup="searchItems()">
+                                <ul id="searchResults"></ul>
+                            </div>
+                        </td>
+                        <td>
+                          <a id="user-link" href="http://localhost:3000/login.html" onclick="handleUserClick(event)">Login</a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    function getUsernameFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('username'); // Get 'username' parameter
+    }
+
+    const username = getUsernameFromURL();
+    const userLink = document.getElementById('user-link');
+
+    function handleUserClick(event) {
+        if (username && username !== "Login") {
+            event.preventDefault(); // Prevent login redirection if user is logged in
+            alert(`Hello, ${username}! You are already logged in.`);
+        }
+    }
+
+    if (userLink) {
+        if (username) {
+            console.log('Logged in user:', username);
+            
+            // Update the link text to the username
+            userLink.innerText = username;
+
+            // Update the onclick dynamically to prevent redirecting if logged in
+            
+
+            // Set the href based on whether the username is "Login" or not
+            if (username === "Login") {
+                userLink.href = "http://localhost:3000/login.html"; // If username is "Login", set the link to login page
+            } else {
+                userLink.href = "http://localhost:3000/profile.html"; // Otherwise, set the link to profile page
+            }
+        }
+    } else {
+        console.error("Element #user-link not found!");
+    }
+});
+
+</script>
+
+                        </td>
+                        <td>
+                            <a href="http://localhost:3000/cartData"><button type="button" value="cart"><img src="cart.png"></button></a>
+                        </td>
+                        <td>
+                            <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <script>
+                var app=angular.module("myapp",[]);
+                app.controller("checker",function($scope)
+                {
+                    $scope.userveri='';
+                    $scope.pasveri='';
+                   $scope.user="Sign In";
+                    $scope.us=/^[a-zA-Z0-9@_]{6,10}$/;
+                    $scope.sexp=/[@\.\$]+/;
+                    $scope.dexp=/[0-9]+/;
+                    $scope.uexp=/[A-Z]+/;
+                    $scope.fn={'color':'red'};
+                    $scope.usercheck=function()
+      {
+        if(! $scope.user.match($scope.us)){
+          $scope.userveri="Enter a valid user name!!";
+          $scope.fn={'color':'red'};
+        }
+        else
+          $scope.userveri='Valid!!';
+          $scope.fn={'color':'lightgreen'};
+      }
+      $scope.paschecker=function(){
+ 
+if($scope.ps.length>=8 && $scope.ps.match($scope.sexp) && $scope.ps.match($scope.dexp) && $scope.ps.match($scope.uexp)){
+  $scope.pw={'color':'lightgreen'};
+    $scope.pasveri="Valid!!";
+}
+else{
+  $scope.pw={'color':'red'};
+  $scope.pasveri="Enter Valid password!!"
+}
+ 
+}
+                });
+                </script>
+      
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="aboutus.html">About</a>
+                <a href="returnpolicy.html">Policy</a>
+                <a href="vehiclem.html">Car Makers</a>
+                <a href="#">Contact</a>
+              </div>
+             
+ 
+            <script>
+                function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+               
+            }
+ 
+                function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+               
+            }
+            </script>
+            <br>
+            <br>
+            <div class="disp">
+               
+                <img src="en1.png" class="mySlides fade" style="width:40%;">
+                <img src="en2.png" class="mySlides fade" style="width:40%;">
+                <img src="en3.png" class="mySlides fade" style="width:40%;">
+               
+                <h1 style="float: right;font-size: 50px;"><span class="dark">
+                       Driven by Quality,
+                    <br> <span class="dark">Defined by Service</span></h1>
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+               
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+                </script>
+                <div class="coffer">
+                    <h1><span class="light">Current</span> <span class="dark">Offers
+                    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+  <button class="next" onclick="plusSlides(1)">&#10095;</button></span>
+                    </h1>
+  <script>
+    let slideIndex = 2;
+    showSlides(slideIndex);
+ 
+// Next/previous controls
+function plusSlides(n) {
+if(n>0)
+showSlides(slideIndex += n);
+else
+showSlides(slideIndex += n-2);
+ 
+}
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("off");
+if (n >slides.length) {slideIndex = 2}
+if (n==2)
+{
+    for (i = n; i >= 0; i--) {
+    slides[i].style.display = "block";
+    return ;
+}
+}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length-2; i=i+2) {
+slides[i].style.display = "none";
+slides[i+1].style.display = "none";
+}
+for (i = slideIndex - 1; i < slideIndex + 1; i++) {
+slides[i].style.display = "block";
+slides[i+1].style.display = "none";
+slides[i+2].style.display = "none";
+ 
+}
+}
+ 
+ 
+    </script>
+                    <div class="lo" style="text-align: center;">
+                        <div class="off">
+                        <img src="offer.png" style="margin-right: 20px;width:47%;">
+                        <img src="offer2.png" style="width:47%;" >
+                    </div>
+                    <div class="off">
+                        <img src="offer3.png" style="margin-right: 20px;width:47%;">
+                        <img src="offer4.png" style="width:47%;"">
+                    </div>
+                    <div class="off">
+                        <img src="offer.png" style="margin-right: 20px;width:47%;">
+                        <img src="offer2.png" style="width:47%;">
+                    </div>
+                    </div>
+                   
+                </div>
+                <br>
+                <br>
+                <div class="scat">
+                    <h1><span class="light">SEARCH BY</span> <span class="dark">CATEGORY</span></h1>
+                </div>
+                <div class="sbut">
+                    <table cellspacing="20">
+                      <tr>
+                        <td><a href="timing-belt.html">
+                           <button type="button"><img src="car.png"><br><h2>Maintainance Service Parts</h2></button>
+                        </td>
+                        <td><a href="ac-compressor.html">  
+                           <button type="button"><img src="air.png"><br><h2>Air Conditioning</h2></button>
+                        </td>
+                        <td><a href="alternate-pulley.html">
+                           <button type="button"><img src="chain.png"><h2>Belts Chains and Rollers</h2></button>
+                        </td>
+                        <td><a href="bearing.html">
+                                                       <button type="button"><img src="bearing.png"><h2>Bearings</h2></button>
+                        </td>
+                        <td><a href="body.html">
+                           <button type="button"><img src="chassis.png"><h2>Body</h2></button>
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+                    <div id="sbuts">
+                        <table cellspacing="20">
+                            <tr>
+                              <td>
+                                 <button type="button" action="C:\Users\ASUS\Desktop\madhav\Page2.html"><img src="car.png"><br><h2>Engine</h2></button>
+                              </td>
+                              <td>
+                                 <button type="button"><img src="air.png"><br><h2>Engine Cooling System</h2></button>
+                              </td>
+                              <td>
+                                 <button type="button"><img src="chain.png"><h2>Exhaust System</h2></button>
+                              </td>
+                              <td>
+                                 <button type="button"><img src="bearing.png"><h2>Filters</h2></button>
+                              </td>
+                              <td>
+                                 <button type="button"><img src="chassis.png"><h2>Fuel Supply System</h2></button>
+                              </td>
+                            </tr>
+                           
+                          </table>
+                    </div>
+                    <center>
+                    <button type="button" id="viewmore" onclick="viewmore()">View More</button>
+                </center>
+                    <br>
+                    <br>
+                    <script>
+                        function viewmore()
+                        {
+                            let x=document.getElementById("sbuts");
+                            let y=document.getElementById("viewmore");
+                            if(x.style.display=="block")
+                            {
+                                x.style.display="none";
+                                y.innerText="View More";
+                            }
+                            else
+                            {
+                                x.style.display="block";
+                                y.innerText="View Less";
+                            }
+                           
+                        }
+                    </script>
+                    <div class="pop">
+                        <h1 class="left"><span class="light">POPULAR </span><span class="dark">CARS MAKERS</span></h1><span><a href="vehiclem.html"><button type="button" style="float: right;" >View All</button></a></span>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <a href="maruti.html"><button type="button">Maruti</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="hyundai.html"><button type="button">Hyundai</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="mahindra.html"><button type="button">Mahindra</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="tata.html"><button type="button">Tata</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="chevrolet.html"><button type="button">Chevrolet</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="honda.html"><button type="button">Honda</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="skoda.html"><button type="button">Skoda</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="toyota.html"><button type="button">Toyota</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button">VW</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">Nissan</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">Renault</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">Ford</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">Fiat</button>
+                                    </td>
+                                    <td>
+                                        <button type="button">Kia</button>
+                                    </td>
+                               
+                                </tr>
+                            </table>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="dmob">
+                        <table>
+                        <tr>  
+                            <td>
+                            <h1><span class="dark">
+                            Download</span>
+                        </h1>
+                        <h1><span class="dark">Our Mobile App</span></h1>
+                        <h4>And get the full Autocare experience on the go.</h4>
+                    </td>
+                    <td >
+                        <center>
+                        <a href="https://www.apple.com/in/app-store/"><button type="button"><img src="appstore.png"></button></a>
+                        <a href="https://play.google.com/store/apps?hl=en&gl=TR"><button type="button"><img src="gplay.png""></button></a>
+                    </center>  
+                    </td>
+                    </tr>    
+                    </table>
+                    </div>
+        </div>
+       
+    </body>
+</html>
+ 
+<style>
+    #searchResults li {
+        padding: 10px 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s ease;
+    }
+ 
+    #searchResults li:hover {
+        background-color: #f5f5f5;
+    }
+</style>
+ 
+ 
+ 
